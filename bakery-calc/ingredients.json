@@ -1,0 +1,292 @@
+[
+  {
+    "id": "101",
+    "category": "Dairy",
+    "name": "Mléko polotučné 1,5%",
+    "unit": "ml",
+    "search_term": "mléko polotučné trvanlivé 1l",
+    "package_price": 24.9,
+    "package_size": "1000ml",
+    "price_per_unit": 0.0249
+  },
+  {
+    "id": "102",
+    "category": "Dairy",
+    "name": "Smetana ke šlehání 33%",
+    "unit": "ml",
+    "search_term": "smetana ke šlehání 33% 250ml",
+    "package_price": 49.9,
+    "package_size": "250ml",
+    "price_per_unit": 0.1996
+  },
+  {
+    "id": "103",
+    "category": "Dairy",
+    "name": "Smetana vysoce tučná 40%",
+    "unit": "ml",
+    "search_term": "smetana 40% kunín",
+    "package_price": 44.9,
+    "package_size": "200ml",
+    "price_per_unit": 0.2245
+  },
+  {
+    "id": "104",
+    "category": "Dairy",
+    "name": "Máslo (82%)",
+    "unit": "g",
+    "search_term": "máslo 82% 250g",
+    "package_price": 74.9,
+    "package_size": "250g",
+    "price_per_unit": 0.2996
+  },
+  {
+    "id": "105",
+    "category": "Dairy",
+    "name": "Tvaroh tučný",
+    "unit": "g",
+    "search_term": "tvaroh tučný vanička 250g",
+    "package_price": 32.9,
+    "package_size": "250g",
+    "price_per_unit": 0.1316
+  },
+  {
+    "id": "106",
+    "category": "Dairy",
+    "name": "Mascarpone",
+    "unit": "g",
+    "search_term": "mascarpone 250g",
+    "package_price": 79.9,
+    "package_size": "250g",
+    "price_per_unit": 0.3196
+  },
+  {
+    "id": "107",
+    "category": "Dairy",
+    "name": "Cream Cheese (Philadelphia)",
+    "unit": "g",
+    "search_term": "philadelphia original",
+    "package_price": 54.9,
+    "package_size": "125g",
+    "price_per_unit": 0.4392
+  },
+  {
+    "id": "108",
+    "category": "Dairy",
+    "name": "Zakysaná smetana",
+    "unit": "g",
+    "search_term": "zakysaná smetana 15%",
+    "package_price": 24.9,
+    "package_size": "180g",
+    "price_per_unit": 0.13833
+  },
+  {
+    "id": "110",
+    "category": "Dairy",
+    "name": "Vejce (M)",
+    "unit": "ks",
+    "search_term": "vejce M 10ks",
+    "package_price": 79.9,
+    "package_size": "10ks",
+    "price_per_unit": 7.99
+  },
+  {
+    "id": "150",
+    "category": "Dairy Alt",
+    "name": "Mléko Ovesné (Barista)",
+    "unit": "ml",
+    "search_term": "oatly barista",
+    "package_price": 74.9,
+    "package_size": "1000ml",
+    "price_per_unit": 0.0749
+  },
+  {
+    "id": "201",
+    "category": "Dry",
+    "name": "Mouka Pšeničná Hladká",
+    "unit": "g",
+    "search_term": "mouka hladká pšeničná světlá",
+    "package_price": 24.9,
+    "package_size": "1000g",
+    "price_per_unit": 0.0249
+  },
+  {
+    "id": "204",
+    "category": "Dry",
+    "name": "Mouka Mandlová",
+    "unit": "g",
+    "search_term": "mandlová mouka",
+    "package_price": 269.0,
+    "package_size": "500g",
+    "price_per_unit": 0.538
+  },
+  {
+    "id": "205",
+    "category": "Dry",
+    "name": "Cukr Krupice/Krystal",
+    "unit": "g",
+    "search_term": "cukr krupice bílý",
+    "package_price": 29.9,
+    "package_size": "1000g",
+    "price_per_unit": 0.0299
+  },
+  {
+    "id": "206",
+    "category": "Dry",
+    "name": "Cukr Moučka",
+    "unit": "g",
+    "search_term": "cukr moučka",
+    "package_price": 34.9,
+    "package_size": "1000g",
+    "price_per_unit": 0.0349
+  },
+  {
+    "id": "207",
+    "category": "Dry",
+    "name": "Kakao holandského typu",
+    "unit": "g",
+    "search_term": "kakao holandské 100g",
+    "package_price": 49.9,
+    "package_size": "100g",
+    "price_per_unit": 0.499
+  },
+  {
+    "id": "301",
+    "category": "Chemistry",
+    "name": "Kypřicí prášek",
+    "unit": "g",
+    "search_term": "kypřicí prášek do pečiva 5ks",
+    "package_price": 19.9,
+    "package_size": "60g",
+    "price_per_unit": 0.33167
+  },
+  {
+    "id": "304",
+    "category": "Chemistry",
+    "name": "Želatina plátková",
+    "unit": "g",
+    "search_term": "želatina plátková dr oetker",
+    "package_price": 39.9,
+    "package_size": "10g",
+    "price_per_unit": 3.99
+  },
+  {
+    "id": "401",
+    "category": "Choco",
+    "name": "Čokoláda Hořká 70% (Kvalitní)",
+    "unit": "g",
+    "search_term": "čokoláda 70% lindt",
+    "package_price": 129.9,
+    "package_size": "100g",
+    "price_per_unit": 1.299
+  },
+  {
+    "id": "402",
+    "category": "Choco",
+    "name": "Čokoláda Mléčná (Kvalitní)",
+    "unit": "g",
+    "search_term": "čokoláda lindt mléčná",
+    "package_price": 99.9,
+    "package_size": "100g",
+    "price_per_unit": 0.999
+  },
+  {
+    "id": "403",
+    "category": "Choco",
+    "name": "Čokoláda Bílá",
+    "unit": "g",
+    "search_term": "čokoláda lindt bílá",
+    "package_price": 99.9,
+    "package_size": "100g",
+    "price_per_unit": 0.999
+  },
+  {
+    "id": "404",
+    "category": "Paste",
+    "name": "Pistáciová pasta (100%)",
+    "unit": "g",
+    "search_term": "pistáciový krém 100%",
+    "package_price": 249.0,
+    "package_size": "190g",
+    "price_per_unit": 1.31053
+  },
+  {
+    "id": "407",
+    "category": "Paste",
+    "name": "Vanilková pasta",
+    "unit": "g",
+    "search_term": "vanilková pasta dr oetker",
+    "package_price": 189.9,
+    "package_size": "100g",
+    "price_per_unit": 1.899
+  },
+  {
+    "id": "408",
+    "category": "Paste",
+    "name": "Vanilkový lusk",
+    "unit": "ks",
+    "search_term": "vanilkový lusk",
+    "package_price": 129.9,
+    "package_size": "1ks",
+    "price_per_unit": 129.9
+  },
+  {
+    "id": "501",
+    "category": "Fruit",
+    "name": "Mražené Jahody",
+    "unit": "g",
+    "search_term": "jahody mražené",
+    "package_price": 79.9,
+    "package_size": "350g",
+    "price_per_unit": 0.22829
+  },
+  {
+    "id": "502",
+    "category": "Fruit",
+    "name": "Mražené Maliny",
+    "unit": "g",
+    "search_term": "maliny mražené",
+    "package_price": 99.9,
+    "package_size": "300g",
+    "price_per_unit": 0.333
+  },
+  {
+    "id": "601",
+    "category": "Nuts",
+    "name": "Vlašské ořechy",
+    "unit": "g",
+    "search_term": "vlašské ořechy jádra",
+    "package_price": 89.9,
+    "package_size": "200g",
+    "price_per_unit": 0.4495
+  },
+  {
+    "id": "603",
+    "category": "Nuts",
+    "name": "Mandle (blanšírované/plátky)",
+    "unit": "g",
+    "search_term": "mandle plátky",
+    "package_price": 84.9,
+    "package_size": "200g",
+    "price_per_unit": 0.4245
+  },
+  {
+    "id": "703",
+    "category": "Alc",
+    "name": "Tuzemák (Rum)",
+    "unit": "ml",
+    "search_term": "božkov tuzemský",
+    "package_price": 199.9,
+    "package_size": "500ml",
+    "price_per_unit": 0.3998
+  },
+  {
+    "id": "902",
+    "category": "Pack",
+    "name": "Krabice na zákusky",
+    "unit": "ks",
+    "search_term": "krabice na dort",
+    "package_price": 25.0,
+    "package_size": "1ks",
+    "price_per_unit": 25.0
+  }
+]
