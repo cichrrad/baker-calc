@@ -157,7 +157,7 @@
 
           <div class="divide-y divide-slate-100 relative">
             <div
-              x-show="recipe.length === 0 && !isSearching"
+              x-show="recipe.length === 0"
               class="p-12 text-center text-slate-400 italic"
             >
               Začněte přidáním první suroviny.
@@ -222,7 +222,7 @@
               </div>
             </template>
 
-            <div x-show="!isSearching" class="p-2 bg-slate-50/50 rounded-b-xl">
+            <div class="p-2 bg-slate-50/50 rounded-b-xl">
               <button
                 @click="startSearch()"
                 class="w-full py-4 border-2 border-dashed border-slate-300 rounded-xl text-slate-400 font-bold hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition flex items-center justify-center gap-2 group"
@@ -245,86 +245,6 @@
                 </div>
                 <span>Přidat surovinu</span>
               </button>
-            </div>
-
-            <div
-              x-show="isSearching"
-              class="p-2 bg-white relative rounded-b-xl"
-            >
-              <div class="relative flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 absolute left-4 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-                <input
-                  x-ref="searchInput"
-                  type="text"
-                  x-model="searchQuery"
-                  @input="performSearch()"
-                  @keydown.escape="cancelSearch()"
-                  @blur="checkBlur($event)"
-                  placeholder="Hledat surovinu..."
-                  class="w-full p-4 pl-12 text-lg border-2 border-blue-500 rounded-xl shadow-lg outline-none"
-                />
-                <button
-                  @click="cancelSearch()"
-                  class="absolute right-4 text-slate-400 hover:text-slate-600"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-
-                <div
-                  x-show="results.length > 0"
-                  class="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-xl shadow-2xl max-h-60 overflow-y-auto scroller z-[50]"
-                >
-                  <template x-for="result in results" :key="result.item.id">
-                    <button
-                      @mousedown.prevent="addToRecipe(result.item)"
-                      class="w-full text-left p-4 hover:bg-blue-50 border-b last:border-0 border-slate-100 flex justify-between items-center group"
-                    >
-                      <div>
-                        <span
-                          class="block font-bold text-lg group-hover:text-blue-700"
-                          x-text="result.item.name"
-                        ></span>
-                        <span
-                          class="text-sm text-slate-400"
-                          x-text="'Balení: ' + result.item.package_size"
-                        ></span>
-                      </div>
-                      <div class="text-right">
-                        <span
-                          class="block font-mono font-bold text-slate-600"
-                          x-text="formatCurrency(result.item.price_per_unit * (result.item.unit === 'g' || result.item.unit === 'ml' ? 100 : 1)) + (result.item.unit === 'ks' ? '/ks' : '/100' + result.item.unit)"
-                        ></span>
-                      </div>
-                    </button>
-                  </template>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -619,6 +539,84 @@
       </div>
 
       <div
+        x-show="searchOpen"
+        x-cloak
+        class="fixed inset-0 z-[200] bg-white flex flex-col"
+      >
+        <div class="p-4 border-b border-slate-200 flex items-center gap-3">
+          <div class="relative flex-grow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              x-ref="searchInput"
+              type="text"
+              x-model="searchQuery"
+              @input="performSearch()"
+              @keydown.escape="cancelSearch()"
+              @keydown.enter.prevent="selectTopResult()"
+              placeholder="Hledat surovinu..."
+              class="w-full pl-10 pr-4 py-3 bg-slate-100 border-none rounded-xl text-lg font-bold text-slate-800 placeholder-slate-400 outline-none focus:ring-2 focus:ring-blue-500/20"
+            />
+          </div>
+          <button @click="cancelSearch()" class="text-slate-500 font-bold px-2">
+            Zrušit
+          </button>
+        </div>
+
+        <div class="flex-grow overflow-y-auto scroller p-2">
+          <template x-for="(result, idx) in results" :key="result.item.id">
+            <button
+              @click="addToRecipe(result.item)"
+              class="w-full text-left p-4 rounded-xl border-b last:border-0 border-slate-50 flex justify-between items-center group transition"
+              :class="idx === 0 ? 'bg-blue-50 border-blue-100 ring-1 ring-blue-200' : 'hover:bg-slate-50'"
+            >
+              <div>
+                <span
+                  class="block font-bold text-lg"
+                  :class="idx === 0 ? 'text-blue-700' : 'text-slate-800'"
+                  x-text="result.item.name"
+                ></span>
+                <span
+                  class="text-sm text-slate-400"
+                  x-text="'Balení: ' + result.item.package_size"
+                ></span>
+              </div>
+              <div class="text-right">
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-1"
+                  x-show="idx === 0"
+                  >Enter</span
+                >
+                <span
+                  class="block font-mono font-bold text-slate-600"
+                  x-text="formatCurrency(result.item.price_per_unit * (result.item.unit === 'g' || result.item.unit === 'ml' ? 100 : 1)) + (result.item.unit === 'ks' ? '/ks' : '/100' + result.item.unit)"
+                ></span>
+              </div>
+            </button>
+          </template>
+
+          <div
+            x-show="results.length === 0 && searchQuery !== ''"
+            class="p-8 text-center text-slate-400"
+          >
+            Žádné výsledky.
+          </div>
+        </div>
+      </div>
+
+      <div
         x-show="numpadOpen"
         x-cloak
         class="fixed inset-0 z-[150] bg-slate-900/40 backdrop-blur-sm flex items-end sm:items-center justify-center"
@@ -738,22 +736,24 @@
           ingredients: [],
           savedRecipes: [],
 
-          // State for current recipe
+          // Search State (NEW)
+          searchOpen: false,
           searchQuery: "",
-          isSearching: false, // CONTROLS THE BOTTOM ROW
+          results: [],
+
+          // Recipe State
           recipe: [],
           currentRecipeName: "",
           portionCount: 1,
 
-          // Numpad State (NEW)
+          // Numpad State
           numpadOpen: false,
           numpadValue: "",
           activeRowIndex: null,
 
-          // State for Managers
+          // Manager State
           managerSearch: "",
           showRecipeList: false,
-          results: [],
           fuse: null,
 
           // Toast State
@@ -800,7 +800,55 @@
             }, 3000);
           },
 
-          /* --- NUMPAD HELPERS (NEW) --- */
+          /* --- SEARCH MODAL LOGIC (NEW) --- */
+
+          initFuse() {
+            const options = { keys: ["name", "search_term"], threshold: 0.3 };
+            this.fuse = new Fuse(this.ingredients, options);
+          },
+
+          startSearch() {
+            this.searchOpen = true;
+            this.searchQuery = "";
+            this.results = [];
+            this.$nextTick(() => {
+              this.$refs.searchInput.focus();
+            });
+          },
+
+          performSearch() {
+            if (!this.searchQuery) {
+              this.results = [];
+              return;
+            }
+            this.results = this.fuse.search(this.searchQuery);
+          },
+
+          selectTopResult() {
+            if (this.results.length > 0) {
+              this.addToRecipe(this.results[0].item);
+            }
+          },
+
+          cancelSearch() {
+            this.searchOpen = false;
+            this.searchQuery = "";
+            this.results = [];
+          },
+
+          addToRecipe(item) {
+            this.recipe.push({ ...item, quantity: 0 });
+
+            // Close search
+            this.cancelSearch();
+
+            // Auto-open NUMPAD for the last item
+            this.$nextTick(() => {
+              this.openNumpad(this.recipe.length - 1);
+            });
+          },
+
+          /* --- NUMPAD HELPERS --- */
 
           openNumpad(index) {
             this.activeRowIndex = index;
@@ -864,17 +912,13 @@
                 return;
             }
 
-            // Deep copy items
             let loadedItems = JSON.parse(JSON.stringify(savedItem.items));
 
-            // SMART UPDATE: Check if prices changed in the meantime
             loadedItems = loadedItems.map((recipeItem) => {
-              // Find the master ingredient by ID
               const masterItem = this.ingredients.find(
                 (i) => i.id === recipeItem.id
               );
               if (masterItem) {
-                // Update price to current master price
                 recipeItem.price_per_unit = masterItem.price_per_unit;
                 recipeItem.package_price = masterItem.package_price;
               }
@@ -886,7 +930,7 @@
             this.portionCount = savedItem.portionCount || 1;
             this.showRecipeList = false;
             this.showToast("Recept načten");
-            this.isSearching = false; // Reset search state
+            this.cancelSearch();
           },
 
           deleteRecipe(index) {
@@ -969,53 +1013,10 @@
             el.remove();
           },
 
-          /* --- CORE CALCULATOR & INLINE SEARCH --- */
-
-          initFuse() {
-            const options = { keys: ["name", "search_term"], threshold: 0.4 };
-            this.fuse = new Fuse(this.ingredients, options);
-          },
-
-          performSearch() {
-            if (!this.searchQuery) {
-              this.results = [];
-              return;
-            }
-            this.results = this.fuse.search(this.searchQuery);
-          },
-
-          startSearch() {
-            this.isSearching = true;
-            this.searchQuery = "";
-            this.results = [];
-            // Focus the new input immediately
-            this.$nextTick(() => {
-              if (this.$refs.searchInput) this.$refs.searchInput.focus();
-            });
-          },
-
-          cancelSearch() {
-            this.isSearching = false;
-            this.searchQuery = "";
-            this.results = [];
-          },
+          /* --- REMOVE OLD SEARCH --- */
 
           checkBlur(event) {
-            // Optional: Close if clicking outside
-          },
-
-          addToRecipe(item) {
-            this.recipe.push({ ...item, quantity: 0 });
-
-            // RESET SEARCH STATE
-            this.isSearching = false;
-            this.searchQuery = "";
-            this.results = [];
-
-            // CHANGED: Auto-open NUMPAD for the last item (the one just added)
-            this.$nextTick(() => {
-              this.openNumpad(this.recipe.length - 1);
-            });
+            // No longer needed
           },
 
           removeRow(index) {
