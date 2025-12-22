@@ -1,4 +1,4 @@
-const CACHE_NAME = "bakery-app-v4"; // <--- CHANGE THIS MANUALLY WHEN UPDATING !!!!
+const CACHE_NAME = "bakery-app-v5"; // <--- CHANGE THIS MANUALLY WHEN UPDATING !!!!
 
 const ASSETS = [
   "./",
