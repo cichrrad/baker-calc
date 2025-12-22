@@ -5,9 +5,14 @@ const ASSETS = [
   "./index.html",
   "./ingredients.json",
   "./manifest.json",
+  "./css/style.css",
+  "./js/app.js",
+  "./js/utils.js",
+  "./js/ingredients.js",
+  "./js/recipes.js",
   "https://cdn.tailwindcss.com",
   "https://cdn.jsdelivr.net/npm/fuse.js@6.6.2",
-  "https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+  "https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js",
 ];
 
 // 1. INSTALL: Cache all files
@@ -37,11 +42,27 @@ self.addEventListener("activate", (e) => {
   return self.clients.claim(); 
 });
 
-// 3. FETCH: Serve from cache if available, otherwise network
 self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
-    })
-  );
+  // If requesting ingredients.json, use Network First strategy
+  if (e.request.url.includes("ingredients.json")) {
+    e.respondWith(
+      fetch(e.request)
+        .then((response) => {
+          // Clone response to put in cache
+          const clonedResponse = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(e.request, clonedResponse);
+          });
+          return response;
+        })
+        .catch(() => caches.match(e.request)) // Fallback to cache if offline
+    );
+  } else {
+    // Standard Cache First for everything else (CSS, JS, HTML)
+    e.respondWith(
+      caches.match(e.request).then((response) => {
+        return response || fetch(e.request);
+      })
+    );
+  }
 });

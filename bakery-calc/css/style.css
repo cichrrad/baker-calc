@@ -1,0 +1,43 @@
+/* css/style.css */
+
+.scroller {
+  -webkit-overflow-scrolling: touch;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+/* Hide arrows in number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Toast Animation */
+.toast-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.toast-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in;
+}
