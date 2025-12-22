@@ -14,7 +14,7 @@
     "auto_price": {
       "scraped_price": 25.4,
       "scraped_unit_price": 25.4,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -33,14 +33,14 @@
     "auto_price": {
       "scraped_price": 47.9,
       "scraped_unit_price": 191.6,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
   {
     "id": "103",
     "category": "Dairy",
-    "name": "Kunín Šlehačka de luxe 40%",
+    "name": "Smetana / Šlehačka de luxe 40%",
     "unit": "ml",
     "source": "rohlik",
     "rohlik_id": 1296101,
@@ -52,14 +52,14 @@
     "auto_price": {
       "scraped_price": 49.9,
       "scraped_unit_price": 249.5,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
   {
     "id": "104",
     "category": "Dairy",
-    "name": "Madeta Jihočeské máslo 82 %",
+    "name": "Jihočeské máslo 82 %",
     "unit": "g",
     "source": "rohlik",
     "rohlik_id": 726539,
@@ -71,7 +71,7 @@
     "auto_price": {
       "scraped_price": 69.9,
       "scraped_unit_price": 279.6,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -90,7 +90,7 @@
     "auto_price": {
       "scraped_price": 32.9,
       "scraped_unit_price": 131.6,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -109,14 +109,14 @@
     "auto_price": {
       "scraped_price": 99.9,
       "scraped_unit_price": 399.6,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
   {
     "id": "107",
     "category": "Dairy",
-    "name": "Philadelphia Original Smetanový sýr | Cream Cheese",
+    "name": "Cream Cheese / Philadelphia Original Smetanový sýr",
     "unit": "g",
     "source": "rohlik",
     "rohlik_id": 761943,
@@ -128,14 +128,14 @@
     "auto_price": {
       "scraped_price": 63.9,
       "scraped_unit_price": 511.2,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
   {
     "id": "108",
     "category": "Dairy",
-    "name": "Kunín Zakysaná smetana de luxe 20%",
+    "name": "Zakysaná smetana de luxe 20%",
     "unit": "g",
     "source": "rohlik",
     "rohlik_id": 1299943,
@@ -147,14 +147,14 @@
     "auto_price": {
       "scraped_price": 37.9,
       "scraped_unit_price": 199.47,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
   {
-    "id": "110",
+    "id": "109",
     "category": "Dairy",
-    "name": "Podestýlková vejce čerstvá M",
+    "name": "Vejce M",
     "unit": "ks",
     "source": "rohlik",
     "rohlik_id": 1394444,
@@ -166,12 +166,12 @@
     "auto_price": {
       "scraped_price": 79.9,
       "scraped_unit_price": 7.99,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
   {
-    "id": "150",
+    "id": "110",
     "category": "Dairy Alt",
     "name": "Mléko Ovesné (Barista) | Oatly! Ovesný nápoj Barista Edition",
     "unit": "ml",
@@ -185,7 +185,26 @@
     "auto_price": {
       "scraped_price": 74.9,
       "scraped_unit_price": 74.9,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
+      "status": "active"
+    }
+  },
+  {
+    "id": "111",
+    "category": "Dairy",
+    "name": "Mléko plnotučné 3,5%",
+    "unit": "ml",
+    "source": "rohlik",
+    "rohlik_id": 712065,
+    "rohlik_url": "https://www.rohlik.cz/712065-madeta-jihoceske-mleko-trvanlive-plnotucne-3-5",
+    "search_term": "Madeta Jihočeské mléko trvanlivé plnotučné 3,5%",
+    "package_price": 27.9,
+    "package_size": "1000ml",
+    "price_per_unit": 0.0279,
+    "auto_price": {
+      "scraped_price": 27.9,
+      "scraped_unit_price": 27.9,
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -204,7 +223,7 @@
     "auto_price": {
       "scraped_price": 12.9,
       "scraped_unit_price": 12.9,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -223,7 +242,7 @@
     "auto_price": {
       "scraped_price": 204.9,
       "scraped_unit_price": 409.8,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -242,7 +261,7 @@
     "auto_price": {
       "scraped_price": 19.9,
       "scraped_unit_price": 19.9,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -261,7 +280,7 @@
     "auto_price": {
       "scraped_price": 24.9,
       "scraped_unit_price": 24.9,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -280,7 +299,7 @@
     "auto_price": {
       "scraped_price": 39.9,
       "scraped_unit_price": 399.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -299,7 +318,7 @@
     "auto_price": {
       "scraped_price": 18.9,
       "scraped_unit_price": 315.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -318,7 +337,7 @@
     "auto_price": {
       "scraped_price": 40.9,
       "scraped_unit_price": 4090.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -337,7 +356,7 @@
     "auto_price": {
       "scraped_price": 47.9,
       "scraped_unit_price": 479.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -356,7 +375,7 @@
     "auto_price": {
       "scraped_price": 47.9,
       "scraped_unit_price": 479.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -375,7 +394,7 @@
     "auto_price": {
       "scraped_price": 47.9,
       "scraped_unit_price": 479.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -394,7 +413,7 @@
     "auto_price": {
       "scraped_price": 64.9,
       "scraped_unit_price": 1442.22,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -413,7 +432,7 @@
     "auto_price": {
       "scraped_price": 209.9,
       "scraped_unit_price": 2099.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -446,7 +465,7 @@
     "auto_price": {
       "scraped_price": 49.9,
       "scraped_unit_price": 142.57,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -465,7 +484,7 @@
     "auto_price": {
       "scraped_price": 49.9,
       "scraped_unit_price": 249.5,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -484,7 +503,7 @@
     "auto_price": {
       "scraped_price": 74.9,
       "scraped_unit_price": 374.5,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -503,7 +522,7 @@
     "auto_price": {
       "scraped_price": 39.9,
       "scraped_unit_price": 399.0,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -522,7 +541,7 @@
     "auto_price": {
       "scraped_price": 199.9,
       "scraped_unit_price": 399.8,
-      "updated_at": "2025-12-22T09:15:54+00:00",
+      "updated_at": "2025-12-22T10:12:20+00:00",
       "status": "active"
     }
   },
@@ -538,6 +557,20 @@
     "package_price": 20.0,
     "package_size": "1ks",
     "price_per_unit": 20.0,
+    "auto_price": null
+  },
+  {
+    "id": "903",
+    "category": "Pack",
+    "name": "Zdobení",
+    "unit": "ks",
+    "source": "manual",
+    "rohlik_id": null,
+    "rohlik_url": null,
+    "search_term": "Zdobení",
+    "package_price": 1.0,
+    "package_size": "1ks",
+    "price_per_unit": 1.0,
     "auto_price": null
   }
 ]

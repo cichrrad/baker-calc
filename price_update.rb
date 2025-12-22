@@ -134,6 +134,6 @@ end
 # --- Execution Block ---
 # Only run this if the script is executed directly (not when imported by test)
 if __FILE__ == $0
-  updater = PriceUpdater.new('ingredients.json')
+  updater = PriceUpdater.new('bakery-calc/ingredients.json')
   updater.run
 end
