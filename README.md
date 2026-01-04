@@ -1,3 +1,7 @@
+# DEMO
+
+![Use_demo](./bakery-calc-demo.gif)
+
 # 🥐 Bakery Cost Estimator (Kalkulačka Nákladů)
 
 A lightweight, local-first Progressive Web App (PWA) for calculating the cost of baking batches.
