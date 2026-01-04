@@ -1,5 +1,3 @@
-# DEMO
-
 ![Use_demo](./bakery-calc-demo.gif)
 
 # 🥐 Bakery Cost Estimator (Kalkulačka Nákladů)
